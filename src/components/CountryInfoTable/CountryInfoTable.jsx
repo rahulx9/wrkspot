@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Table.module.scss";
+import styles from "./CountryInfoTable.module.scss";
 
 import { createColumnHelper } from "@tanstack/react-table";
 import GenericTable from "../common/GenericTable";
