@@ -1,18 +1,18 @@
-import React from 'react';
-import styles from './Input.module.scss';
-import { clsx } from 'clsx';
+import React from "react";
+import styles from "./Input.module.scss";
+import { clsx } from "clsx";
 
-const Input = ({ 
-  type = 'text', 
+const Input = ({
+  type = "text",
   value,
   name,
-  onChange, 
-  placeholder, 
-  label, 
-  required = false, 
-  error, 
+  onChange,
+  placeholder,
+  label,
+  required = false,
+  error,
   onBlur,
-  className
+  className,
 }) => {
   return (
     <span className={styles.inputWrapper}>
@@ -28,7 +28,11 @@ const Input = ({
         onChange={onChange}
         onBlur={onBlur}
         placeholder={placeholder}
-        className={clsx(styles.inputField, className, error && styles.inputError)}
+        className={clsx(
+          styles.inputField,
+          className,
+          error && styles.inputError
+        )}
       />
       {error && <div className={styles.errorMessage}>{error}</div>}
     </span>

@@ -1,10 +1,13 @@
 import "./App.css";
-import CountriesInfo from "./pages/CountriesInfo/CountriesInfo";
+import CountriesInfo from "./pages/CountriesInfo";
+import ErrorBoundary from "./utils/ErrorBoundary";
 
 function App() {
   return (
     <div className="App">
-      <CountriesInfo />
+      <ErrorBoundary>
+        <CountriesInfo />
+      </ErrorBoundary>
     </div>
   );
 }

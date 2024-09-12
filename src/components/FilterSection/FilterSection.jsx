@@ -9,7 +9,7 @@ const FilterSection = ({
   filter,
   handleFilterChange,
   handleClearFilter,
-  setShowAll
+  setShowAll,
 }) => {
   const handleShowAllCountries = () => {
     setShowAll(true);

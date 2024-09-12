@@ -4,6 +4,7 @@ import Heading from "../../components/Heading";
 import Table from "../../components/CountryInfoTable";
 import { getAllCountries } from "../../services/api/countryService";
 import { hasValidValues } from "../../utils/commonUtils";
+import ErrorBoundary from "../../utils/ErrorBoundary";
 
 const CountriesInfo = () => {
   const [allCountriesData, setAllCountriesData] = useState([]);
@@ -33,14 +34,14 @@ const CountriesInfo = () => {
   }, []);
 
   useEffect(() => {
-    if(showAll) {
-      setTableData(allCountriesData)
-      return
+    if (showAll) {
+      setTableData(allCountriesData);
+      return;
     }
 
     const nameFilter = filter?.name?.toLowerCase() || "";
     const populationFilter = filter?.population || 0;
-    
+
     if (!hasValidValues(filter)) {
       setTableData([]);
       return;
@@ -62,7 +63,9 @@ const CountriesInfo = () => {
         handleClearFilter={handleClearFilter}
         setShowAll={setShowAll}
       />
-      <Table tableData={tableData} />
+      <ErrorBoundary>
+        <Table tableData={tableData} />
+      </ErrorBoundary>
     </div>
   );
 };
