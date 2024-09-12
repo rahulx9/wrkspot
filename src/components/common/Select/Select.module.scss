@@ -1,0 +1,35 @@
+.label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: red;
+}
+
+.selectBox {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.selectBox:focus {
+  outline: none;
+}
+
+.selectError {
+  border-color: red;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.selectBox:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}

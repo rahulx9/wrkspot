@@ -1,0 +1,23 @@
+$tableOutlineWidth : 2px;
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: $tableOutlineWidth solid #ddd;
+}
+
+.tableHeading,
+.tableData {
+    border: $tableOutlineWidth solid #ddd;
+    padding: 8px;
+}
+
+.tableHeading {
+    text-align: left;
+    font-weight: 800;
+}
+
+.noDataClass {
+    text-align: center;
+    padding: 20px
+}
